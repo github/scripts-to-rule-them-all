@@ -1,7 +1,7 @@
 # Scripts To Rule Them All
 
 This is a set of boilerplate scripts describing the [normalized script pattern
-that GitHub uses in it's projects](link-to-strta-blog-post). While these
+that GitHub uses in its projects](link-to-strta-blog-post). While these
 patterns can work for projects based on any framework or language, these
 particular examples are for a simple Ruby on Rails application.
 
@@ -15,7 +15,7 @@ run.
 
 The intricacies of things like test commands and bootstrapping can be managed by
 maintainers, who have a rich understanding of the project's domain. Individual
-contributors need to only know the patterns and can simply run the commands and
+contributors need only to know the patterns and can simply run the commands and
 get what they expect.
 
 ## The Scripts
@@ -34,16 +34,15 @@ The following is a list of scripts and their primary responsibilities.
 
 `script/bootstrap` is used solely for fulfilling dependencies of the project.
 
-This can mean RubyGems, npm packages, GIT submodules, etc.
+This can mean RubyGems, npm packages, Git submodules, etc.
 
-The goal is to make sure all third party dependencies are installed that are
-required for the project to run.
+The goal is to make sure all required dependencies are installed.
 
 ### script/setup
 
-`script/setup` is used to set up a project into an initial state.
+`script/setup` is used to set up a project in an initial state.
 This is typically run after an initial clone, or, to reset the project back to
-an initial state before any use was had.
+its initial state.
 
 This is also useful for ensuring that your bootstrapping actually works well.
 
@@ -62,9 +61,8 @@ state of the app into shape for the current version that is checked out.
 
 `script/server` is used to start the application.
 
-For a web application, this
-might start up any extra processes that the application requires to run in
-addition to itself.
+For a web application, this might start up any extra processes that the 
+application requires to run in addition to itself.
 
 `script/update` should be called ahead of any application booting to ensure that
 the application is up to date and can run appropriately.
@@ -81,7 +79,6 @@ setting up the application appropriately based on the environment. For example,
 if called in a development environment, it should probably call `script/update`
 to always ensure that the application is up to date. If called from
 `script/cibuild`, it should probably reset the application to a clean state.
-
 
 ### script/cibuild
 
