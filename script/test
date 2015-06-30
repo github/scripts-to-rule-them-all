@@ -6,6 +6,8 @@
 
 set -e
 
+cd $(dirname "$0")/..
+
 [ -z "$DEBUG" ] || set -x
 
 export RACK_ROOT=$(cd "$(dirname $0)"/.. && pwd)

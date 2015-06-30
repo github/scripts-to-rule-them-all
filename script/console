@@ -7,6 +7,8 @@
 
 set -e
 
+cd $(dirname "$0")/..
+
 if [ -n "$1" ]; then
   # use first argument as an environment name. Use this to decide how to connect
   # to the appropriate console.
