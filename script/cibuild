@@ -5,7 +5,7 @@
 
 set -e
 
-cd $(dirname "$0")/..
+cd "$(dirname "$0")/.."
 
 echo "Tests started at..."
 date "+%H:%M:%S"
