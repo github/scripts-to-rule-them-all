@@ -50,7 +50,7 @@ This is also useful for ensuring that your bootstrapping actually works well.
 
 `script/update` is used to update the project after a fresh pull.
 
-If you have not worked on the project for a while, running `script/setup` after
+If you have not worked on the project for a while, running `script/update` after
 a pull will ensure that everything inside the project is up to date and ready to work.
 
 Typically, `script/bootstrap` is run inside this script. This is also a good
