@@ -7,7 +7,22 @@ set -e
 
 cd "$(dirname "$0")/.."
 
+echo "==> Installing Ruby…"
+rbenv install --skip-existing
+
 echo "==> Installing gem dependencies…"
+which bundle 2>&1 > /dev/null || {
+  gem install bundler
+}
 bundle check --path vendor/gems 2>&1 > /dev/null || {
   bundle install --path vendor/gems --quiet --without production
 }
+
+if [ "$(uname -s)" = "Darwin" ] && brew --prefix 2>&1 > /dev/null; then
+  echo "==> Installing Homebrew dependencies…"
+  brew update
+  brew tap homebrew/bundle 2>/dev/null
+  brew bundle check 2>&1 > /dev/null || {
+    brew bundle
+  }
+fi
