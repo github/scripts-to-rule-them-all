@@ -34,7 +34,7 @@ The following is a list of scripts and their primary responsibilities.
 
 `script/bootstrap` is used solely for fulfilling dependencies of the project.
 
-This can mean RubyGems, npm packages, Git submodules, etc.
+This can mean RubyGems, npm packages, Homebrew packages, Ruby versions, Git submodules, etc.
 
 The goal is to make sure all required dependencies are installed.
 
