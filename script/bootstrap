@@ -16,7 +16,7 @@ fi
 
 if [ -f ".ruby-version" ] && [ -z "$(rbenv version-name 2>/dev/null)" ]; then
   echo "==> Installing Ruby…"
-  rbenv install
+  rbenv install --skip-existing 
   which bundle 2>&1 >/dev/null || {
     gem install bundler
     rbenv rehash
