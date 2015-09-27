@@ -10,4 +10,4 @@ script/bootstrap
 
 echo "==> Updating db..."
 # run all database migrations to ensure everything is up to date.
-bin/rake db:create db:migrate
+bin/rake db:migrate

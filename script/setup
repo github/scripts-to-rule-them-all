@@ -16,7 +16,7 @@ script/bootstrap
 
 echo "===> Setting up DB..."
 # reset database to a fresh state.
-bin/rake db:reset
+bin/rake db:create db:reset
 
 if [ -z "$RAILS_ENV" ] && [ -z "$RACK_ENV" ]; then
   # Only things for a development environment will run inside here
