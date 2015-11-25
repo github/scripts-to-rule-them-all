@@ -88,7 +88,7 @@ to always ensure that the application is up to date. If called from
 `script/cibuild` is used for your continuous integration server.
 This script is typically only called from your CI server.
 
-You should set up any specific things for you environment here before your tests
+You should set up any specific things for your environment here before your tests
 are run. Your test are run simply by calling `script/test`.
 
 ### script/console
