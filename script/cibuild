@@ -5,7 +5,7 @@
 
 set -e
 
-cd "$(dirname "$0")/.."
+cd "${0%/*}/.."
 
 echo "Tests started at..."
 date "+%H:%M:%S"
@@ -18,13 +18,13 @@ export RUBY_HEAP_SLOTS_INCREMENT=400000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 
 # setup environment
-export RAILS_ROOT=$(cd "$(dirname $0)"/.. && pwd)
+export RAILS_ROOT=$(cd "${0%/*}/.." && pwd)
 export RAILS_ENV="test"
 export RACK_ROOT="$RAILS_ROOT"
 export RACK_ENV="$RAILS_ENV"
 
 test -d "/usr/share/rbenv/shims" && {
-  export PATH=/usr/share/rbenv/shims:$PATH
+  export PATH="/usr/share/rbenv/shims:$PATH"
 }
 export RBENV_VERSION="2.1.6"
 

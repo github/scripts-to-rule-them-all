@@ -7,14 +7,14 @@
 
 set -e
 
-cd "$(dirname "$0")/.."
+cd "${0%/*}/.."
 
 if [ -n "$1" ]; then
   # use first argument as an environment name. Use this to decide how to connect
   # to the appropriate console.
-  if [ "$1" == "production" ]; then
+  if [ "$1" = "production" ]; then
     heroku run rails console --app heroku-app-name
-  elif [ "$1" == "staging" ]; then
+  elif [ "$1" = "staging" ]; then
     heroku run rails console --app heroku-app-name-staging
   else
     echo "Sorry, I don't know how to connect to the '$1' environment."

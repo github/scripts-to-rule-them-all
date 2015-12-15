@@ -6,11 +6,11 @@
 
 set -e
 
-cd "$(dirname "$0")/.."
+cd "${0%/*}/.."
 
 [ -z "$DEBUG" ] || set -x
 
-export RACK_ROOT=$(cd "$(dirname $0)"/.. && pwd)
+export RACK_ROOT=$(cd "${0%/*}/.." && pwd)
 
 if [ "$RAILS_ENV" = "test" ] || [ "$RACK_ENV" = "test" ]; then
   # if executed and the environment is already set to `test`, then we want a
