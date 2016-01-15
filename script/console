@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # script/console: Launch a console for the application. Optionally allow an
 #                 environment to be passed in to let the script handle the
