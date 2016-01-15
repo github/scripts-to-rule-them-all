@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # script/setup: Set up application for the first time after cloning, or set it
 #               back to the initial first unused state.
@@ -18,6 +18,7 @@ if [ -z "$RAILS_ENV" ] && [ -z "$RACK_ENV" ]; then
   # Do things that need to be done to the application to set up for the first
   # time. Or things needed to be run to to reset the application back to first
   # use experience. These things are scoped to the application's domain.
+  :
 fi
 
 echo "==> App is now ready to go!"
