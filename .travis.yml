@@ -1,2 +1,7 @@
+language: bash
+install:
+  - wget http://ftp.debian.org/debian/pool/main/s/shellcheck/shellcheck_0.3.7-5_amd64.deb
+  - dpkg -x shellcheck_0.3.7-5_amd64.deb shellcheck/
 script:
-  - bash -n script/*
+  - shellcheck/usr/bin/shellcheck script/*
+sudo: false
