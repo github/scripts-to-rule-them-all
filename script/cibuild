@@ -7,7 +7,7 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-echo "Tests started at..."
+echo "Tests started at…"
 date "+%H:%M:%S"
 
 # GC customizations
@@ -32,7 +32,7 @@ export RBENV_VERSION="2.1.6"
 export PATH="$RACK_ROOT/bin:$PATH"
 
 # run tests
-echo "Running tests ..."
+echo "Running tests …"
 date "+%H:%M:%S"
 
 # run tests.
