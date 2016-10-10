@@ -29,7 +29,7 @@ else
   script/update
 fi
 
-echo "===> Running tests…"
+echo "==> Running tests…"
 
 if [ -n "$1" ]; then
   # pass arguments to test call. This is useful for calling a single test.
