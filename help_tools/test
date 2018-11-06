@@ -8,12 +8,7 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-[ -z "$DEBUG" ] || set -x
-
-RACK_ROOT="$(cd "$(dirname "$0")"/.. && pwd)"
-export RACK_ROOT
-
-if [ "$RAILS_ENV" = "test" ] || [ "$RACK_ENV" = "test" ]; then
+if [ "$PYTHON_ENV" = "test" ]; then
   # if executed and the environment is already set to `test`, then we want a
   # clean from scratch application. This almost always means a ci environment,
   # since we set the environment to `test` directly in `script/cibuild`.
@@ -30,10 +25,4 @@ else
 fi
 
 echo "==> Running tests…"
-
-if [ -n "$1" ]; then
-  # pass arguments to test call. This is useful for calling a single test.
-  bin/rake test "$1"
-else
-  bin/rake test
-fi
+pytest

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# script/cibuild: Setup environment for CI to run tests. This is primarily
+#                 designed to run on the continuous integration server.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+echo "Tests started at…"
+date "+%H:%M:%S"
+
+# setup environment
+export PYTHON_ENV="test"
+export SOME_VALUE="1234"
+
+# run tests
+echo "Running tests…"
+date "+%H:%M:%S"
+
+# run tests.
+script/test
