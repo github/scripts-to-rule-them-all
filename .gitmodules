@@ -1,0 +1,3 @@
+[submodule "ISSUE_TEMPLATE"]
+	path = ISSUE_TEMPLATE
+	url = https://github.com/urbanonymous/ISSUE_TEMPLATE
