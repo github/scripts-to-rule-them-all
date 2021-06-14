@@ -1,0 +1,14 @@
+name: GitHub Actions CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@main
+
+      - run: shellcheck script/*
