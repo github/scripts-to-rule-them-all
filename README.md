@@ -1,7 +1,5 @@
 # Scripts To Rule Them All
 
-[![Build Status](https://travis-ci.org/github/scripts-to-rule-them-all.svg?branch=master)](https://travis-ci.org/github/scripts-to-rule-them-all)
-
 This is a set of boilerplate scripts describing the [normalized script pattern
 that GitHub uses in its projects](http://githubengineering.com/scripts-to-rule-them-all/). While these
 patterns can work for projects based on any framework or language, these
@@ -63,7 +61,7 @@ state of the app into shape for the current version that is checked out.
 
 [`script/server`][server] is used to start the application.
 
-For a web application, this might start up any extra processes that the 
+For a web application, this might start up any extra processes that the
 application requires to run in addition to itself.
 
 [`script/update`][update] should be called ahead of any application booting to ensure that
