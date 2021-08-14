@@ -11,8 +11,8 @@ cd "$(dirname "$0")/.."
 
 if [ -n "$1" ]; then
   # use first argument as an environment name. Use this to decide how to connect
-  # to the appropriate console.
-  if [ "$1" = "production" ]; then
+  # to the appropriate console. 
+  if [ "$1" = "production" ]; then 
     heroku run rails console --app heroku-app-name
   elif [ "$1" = "staging" ]; then
     heroku run rails console --app heroku-app-name-staging
