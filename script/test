@@ -17,13 +17,13 @@ if [ "$RAILS_ENV" = "test" ] || [ "$RACK_ENV" = "test" ]; then
   # if executed and the environment is already set to `test`, then we want a
   # clean from scratch application. This almost always means a ci environment,
   # since we set the environment to `test` directly in `script/cibuild`.
-  script/setup
+  script/setup 
 else
   # if the environment isn't set to `test`, set it to `test` and update the
   # application to ensure all dependencies are met as well as any other things
   # that need to be up to date, like db migrations. The environment not having
   # already been set to `test` almost always means this is being called on its
-  # own from a `development` environment.
+  # own from a `development` environment. 
   export RAILS_ENV="test" RACK_ENV="test"
 
   script/update
