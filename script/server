@@ -2,7 +2,7 @@
 
 # script/server: Launch the application and any extra required processes
 #                locally.
-
+ 
 set -e
 
 cd "$(dirname "$0")/.."
@@ -13,5 +13,5 @@ script/update
 test -z "$RACK_ENV" &&
   RACK_ENV='development'
 
-# boot the app and any other necessary processes.
+# boot the app and any other necessary processes. 
 foreman start -p 9393
