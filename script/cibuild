@@ -35,5 +35,4 @@ export PATH="$RACK_ROOT/bin:$PATH"
 echo "Running tests…"
 date "+%H:%M:%S"
 
-# run tests.
 script/test
